@@ -47,7 +47,18 @@ Here’s an enhanced and more detailed version of your installation guide to imp
 
 ## Installation Guide 🛠️
 
-To set up the Crypto Tracker application locally, follow these steps:
+###  Live Demo 🚀
+
+You can view the Crypto Tracker app live by visiting the following URL:
+
+[**Crypto Tracker Live**](https://crypto-tracker-pink-nu.vercel.app/)
+
+This gives you immediate access to the application, so you can start tracking cryptocurrency prices right away!
+
+---
+
+To set up and run the Crypto Tracker application locally, follow the steps below:
+
 
 ### 1. Clone the Repository
 
