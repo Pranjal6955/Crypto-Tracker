@@ -41,46 +41,76 @@ Switch to dark mode for a more comfortable viewing experience at night or in low
 
 ---
 
-## Installation 🛠️
-
-1. Clone this repository to your local machine.
-
-   ```bash
-   git clone https://github.com/yourusername/crypto-tracking-app.git
-   ```
-
-2. Navigate to the project folder.
-
-   ```bash
-   cd crypto-tracking-app
-   ```
-
-3. Install the necessary dependencies.
-
-   ```bash
-   npm install
-   ```
-
-4. Start the application.
-
-   ```bash
-   npm start
-   ```
+Here’s an enhanced and more detailed version of your installation guide to improve clarity and usability for users who will be setting up the project on their local machine:
 
 ---
 
-## Contributing 🤝
+## Installation Guide 🛠️
 
-We welcome contributions! If you'd like to contribute to this project, please follow these steps:
+To set up the Crypto Tracker application locally, follow these steps:
 
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes.
-4. Commit your changes with descriptive messages.
-5. Push your changes to your fork.
-6. Open a pull request.
+### 1. Clone the Repository
+
+Start by cloning the repository to your local machine using Git. Open your terminal or command prompt and run the following command:
+
+```bash
+git clone https://github.com/Pranjal6955/Crypto-Tracker.git
+```
+
+This command will create a local copy of the project on your machine.
 
 ---
+
+### 2. Navigate to the Project Folder
+
+Once the repository is cloned, move into the project directory:
+
+```bash
+cd Crypto-Tracker
+```
+
+This will change your working directory to the project folder.
+
+---
+
+### 3. Install Dependencies
+
+Now, you need to install all the required dependencies for the project. Make sure you have Node.js installed (if not, download and install it from [here](https://nodejs.org/)).
+
+Run the following command to install the necessary packages:
+
+```bash
+npm install
+```
+
+This will read the `package.json` file and install all dependencies required to run the project.
+
+---
+
+### 4. Start the Development Server
+
+After the dependencies are installed, you can start the development server. Run the following command:
+
+```bash
+npm run dev
+```
+
+This will start the application locally. You should see output in the terminal that looks something like:
+
+```
+> crypto-tracker@1.0.0 dev
+> vite
+
+  VITE v2.0.0  ready in 500ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: use `--host` to expose
+```
+
+Now open your web browser and go to `http://localhost:3000/`. You should see the Crypto Tracker app running locally on your machine!
+
+---
+
 
 ## License 📜
 
