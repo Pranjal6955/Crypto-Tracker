@@ -62,7 +62,8 @@ function CryptoTracker() {
       );
       return response.data;
     },
-    enabled: !!selectedCrypto
+    enabled: !!selectedCrypto,
+    refetchOnWindowFocus: true // Refetch when switching coins
   });
 
   const { data: chartData = { labels: [], prices: [] } } = useQuery({
@@ -78,7 +79,8 @@ function CryptoTracker() {
       const prices = response.data.prices.map((price: [number, number]) => price[1]);
       return { labels, prices };
     },
-    enabled: !!selectedCrypto
+    enabled: !!selectedCrypto,
+    refetchOnWindowFocus: true // Refetch when switching coins
   });
 
   const handleSetAlert = (alert: Omit<PriceAlertType, 'id' | 'createdAt'>) => {
@@ -224,31 +226,27 @@ function CryptoTracker() {
               ))}
             </div>
           )}
+
+          {selectedCrypto && selectedCryptoDetails && chartData.prices.length > 0 && (
+            <CryptoModal
+              crypto={selectedCrypto}
+              // details={selectedCryptoDetails}
+              chartData={chartData}
+              currency={currency}
+              onClose={() => setSelectedCrypto(null)}
+              isDark={isDark}
+            />
+          )}
         </div>
       </div>
-
-      {selectedCrypto && (
-        <CryptoModal
-          crypto={{
-            ...selectedCrypto,
-            description: selectedCryptoDetails?.description
-          }}
-          currency={currency}
-          onClose={() => setSelectedCrypto(null)}
-          chartData={chartData}
-          isDark={isDark}
-        />
-      )}
     </div>
   );
 }
 
-function App() {
+export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <CryptoTracker />
     </QueryClientProvider>
   );
 }
-
-export default App;
